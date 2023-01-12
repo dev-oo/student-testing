@@ -20,6 +20,7 @@ public class TestController {
         return new ResponseEntity<>(ApiResponse.builder().result("I am Home").message("Working fine").status(HttpStatus.OK).build(), HttpStatus.OK);
     }
 
+    //for testing Dto inner class
     @PostMapping
     public void printName( @RequestBody emailDto dto) {
         System.out.println(dto.toString());
