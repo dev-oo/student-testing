@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.dto.emailDto;
+import com.example.demo.dto.EmailDto;
 import com.example.demo.response.ApiResponse;
 
 @RestController
@@ -22,7 +22,7 @@ public class TestController {
 
     //for testing Dto inner class
     @PostMapping
-    public void printName( @RequestBody emailDto dto) {
+    public void printName( @RequestBody EmailDto dto) {
         System.out.println(dto.toString());
     }
     

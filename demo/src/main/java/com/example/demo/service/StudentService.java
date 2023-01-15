@@ -33,7 +33,6 @@ public class StudentService {
         }
         if (studentExisting != null) {
             studentExisting.setAddress(student.getAddress());
-            studentExisting = null;
         }
         return studentRepository.save(studentExisting != null ? studentExisting : new Student());
 

@@ -3,7 +3,7 @@ package com.example.demo.dto;
 import lombok.Data;
 
 @Data
-public class emailDto {
+public class EmailDto {
     
     private String actiontype;
 
