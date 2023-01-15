@@ -8,19 +8,19 @@ import { StudentService } from '../service/student.service';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private studentService:StudentService ) {
+  constructor(private studentService: StudentService) {
   }
 
-  students:any;
-  apiResponse:any;
+  students: any;
+  apiResponse: any;
 
   ngOnInit(): void {
     this.getAllStudents()
   }
 
-  lists:any = [];
+  lists: any = [];
 
-  addStudentsInList():void{
+  addStudentsInList(): void {
     this.students = this.apiResponse.result ? this.apiResponse.result : [];
     console.log(this.students);
   }
@@ -28,13 +28,12 @@ export class ListComponent implements OnInit {
   getAllStudents() {
     this.studentService.getAllStudents().subscribe({
       next: (res) => { this.apiResponse = res; },
-      complete: () => {this.addStudentsInList();},
-      error: (err) => {console.log('something went wrong');}
+      complete: () => { this.addStudentsInList(); },
+      error: (err) => { console.log('something went wrong'); }
     });
   }
 
-  getStudentById(id:number){
+  getStudentById(id: number) {
     this.studentService.getStudentById(id).subscribe({})
-
   }
 }

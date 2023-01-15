@@ -1,34 +1,32 @@
 export class Student {
 
-  private _name!: string;
-  private _id!: number;
-  private _rollNo!: number;
-  private _address!: string;
+  private id!: number;
+  private name!: string;
+  private roll_no!: number;
+  private address!: string;
 
-  public get address(): string {
-    return this._address;
+  public get $name(): string {
+    return this.name;
   }
-  public set address(value: string) {
-    this._address = value;
+  public set $name(value: string) {
+    this.name = value;
   }
-  public get rollNo(): number {
-    return this._rollNo;
+  public get $id(): number {
+    return this.id;
   }
-  public set rollNo(value: number) {
-    this._rollNo = value;
+  public set $id(value: number) {
+    this.id = value;
   }
-
-  public get id(): number {
-    return this._id;
+  public get $rollNo(): number {
+    return this.roll_no;
   }
-  public set id(value: number) {
-    this._id = value;
+  public set $rollNo(value: number) {
+    this.roll_no = value;
   }
-
-  public get name(): string {
-    return this._name;
+  public get $address(): string {
+    return this.address;
   }
-  public set name(value: string) {
-    this._name = value;
+  public set $address(value: string) {
+    this.address = value;
   }
 }
