@@ -32,4 +32,9 @@ export class ListComponent implements OnInit {
       error: (err) => {console.log('something went wrong');}
     });
   }
+
+  getStudentById(id:number){
+    this.studentService.getStudentById(id).subscribe({})
+
+  }
 }
