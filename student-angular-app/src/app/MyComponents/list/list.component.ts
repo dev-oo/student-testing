@@ -36,4 +36,20 @@ export class ListComponent implements OnInit {
   getStudentById(id: number) {
     this.studentService.getStudentById(id).subscribe({})
   }
+
+  ischeck!:boolean;
+
+  isChecked(event:any){
+    console.log(this.ischeck);
+    console.log(event.target.checked);
+    console.log(event.target.value);
+
+  }
+
+  noOfDays!:number;
+  printDays(){
+    console.log(this.noOfDays);
+  }
+
+
 }

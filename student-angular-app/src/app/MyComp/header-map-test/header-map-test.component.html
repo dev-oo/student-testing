@@ -1,0 +1,25 @@
+<ul class="">
+  <li *ngFor="let header of headersArray; index as i">
+    <input class="" name="node" [(ngModel)]="header.headerName" value="" type="text" placeholder="Http Header">
+    <input class="" name="node" [(ngModel)]="header.headerValue" value="" type="text" placeholder="Value">
+      <a href="#" class="crossicon" (click)="removeHeader(i)" *ngIf="headersArray.length != i+1 "> cross
+        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L11 11" stroke="white" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 4.5L14 14" stroke="white" stroke-width="2" stroke-linecap="round" />
+          <path d="M2 14L15 1" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </a>
+      <a href="#" class="plusicon" (click)="addHeader()" *ngIf="headersArray.length == i+1"> add
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.125 0.875C6.125 0.391751 6.51675 0 7 0C7.48325 0 7.875 0.391751 7.875 0.875V13.125C7.875 13.6082 7.48325 14 7 14C6.51675 14 6.125 13.6082 6.125 13.125V0.875Z"
+            fill="white" />
+          <path
+            d="M0.875 7.875C0.391751 7.875 0 7.48325 0 7C0 6.51675 0.391751 6.125 0.875 6.125H13.125C13.6082 6.125 14 6.51675 14 7C14 7.48325 13.6082 7.875 13.125 7.875H0.875Z"
+            fill="white" />
+        </svg>
+      </a>
+  </li>
+</ul>
+
+<button (click)="logHeader()">log headres</button>
